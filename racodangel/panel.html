@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel de reservas · Racó d’Àngel (demo OrtiTech)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="panel-body">
+
+<div class="demo-bar">
+  <span class="long">Así veríais las reservas desde el móvil · <b>datos de ejemplo</b> (demo OrtiTech)</span>
+  <span class="short">Panel · <b>datos de ejemplo</b></span>
+  <a href="index.html">← Volver a la web</a>
+</div>
+
+<div class="panel-top">
+  <div class="wrap">
+    <img src="img/logo.webp" alt="Racó d’Àngel">
+    <span style="font-size: 14px; color: #cfc6b8" id="today"></span>
+  </div>
+</div>
+
+<main class="wrap" style="padding-bottom: 60px">
+  <div class="kpis">
+    <div class="kpi"><b>14</b><span>reservas del día</span></div>
+    <div class="kpi"><b>38 / 52</b><span>comensales comida (aforo)</span></div>
+    <div class="kpi"><b>11</b><span>recordatorios enviados</span></div>
+    <div class="kpi"><b>6</b><span>reservas hechas fuera de horario</span></div>
+  </div>
+
+  <div class="panel-grid">
+    <div class="list">
+      <h3>Comida <button class="btn dark" style="padding: 8px 14px; font-size: 14px" data-demo="Añadís a mano las reservas que entran por teléfono, y quedan en el mismo sitio.">+ Reserva por teléfono</button></h3>
+      <div id="rows"></div>
+    </div>
+
+    <div class="side">
+      <div class="list">
+        <h3>Ocupación</h3>
+        <div style="padding: 14px 18px">
+          <small>Sala · 30 / 36</small><div class="bar"><i style="width: 83%"></i></div>
+          <small>Terraza · 8 / 16</small><div class="bar"><i style="width: 50%"></i></div>
+          <small>Cena (miércoles a viernes) · 12 / 52</small><div class="bar"><i style="width: 23%"></i></div>
+        </div>
+      </div>
+      <div class="list">
+        <h3>Ajustes rápidos</h3>
+        <label class="switch">Aceptar reservas online hoy <input type="checkbox" checked></label>
+        <label class="switch">Turno de cena abierto <input type="checkbox" checked></label>
+        <label class="switch">Terraza disponible <input type="checkbox" checked></label>
+        <label class="switch">Recordatorio por WhatsApp el día antes <input type="checkbox" checked></label>
+        <p class="note" style="padding: 0 18px 14px; text-align: left">Por ejemplo, si llueve se desactiva la terraza y la web deja de ofrecerla al momento.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<script>
+  // Datos de ejemplo (nombres ficticios)
+  const rows = [
+    ["13:00", "Marta R.", 2, "Sala", "Confirmada", ""],
+    ["13:00", "Jordi P.", 4, "Terraza", "Confirmada", "Trona"],
+    ["13:30", "Laura M.", 3, "Sala", "Confirmada", ""],
+    ["13:30", "Empresa (Carles S.)", 8, "Sala", "Confirmada", "Menú del día"],
+    ["14:00", "Pablo G.", 2, "Terraza", "Pendiente", "Recordatorio enviado"],
+    ["14:00", "Núria V.", 5, "Sala", "Confirmada", "Celíaca"],
+    ["14:30", "Sergio L.", 2, "Sala", "Nueva", "Reservó a las 23:40"],
+    ["14:30", "Anna F.", 6, "Terraza", "Confirmada", "Cumpleaños"],
+    ["15:00", "Teléfono · Sr. Ruiz", 2, "Sala", "Confirmada", ""],
+  ];
+  const cls = { "Confirmada": "", "Pendiente": "wait", "Nueva": "new" };
+  document.getElementById("rows").innerHTML = rows.map(([t, n, p, z, s, note]) =>
+    `<div class="row"><time>${t}</time><div><b>${n}</b> · ${p} pax<small>${z}${note ? " · " + note : ""}</small></div>
+     <span class="tag ${cls[s]}">${s}</span></div>`).join("");
+  // El domingo cierran: se muestra el próximo día con servicio
+  const day = new Date(); if (day.getDay() === 0) day.setDate(day.getDate() + 1);
+  document.getElementById("today").textContent =
+    day.toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
+  const toast = document.getElementById("toast");
+  document.querySelectorAll("[data-demo]").forEach(el => el.addEventListener("click", () => {
+    toast.textContent = el.dataset.demo; toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 3000);
+  }));
+</script>
+</body>
+</html>
