@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Contacto · Elite Garaje (demo de OrtiTech)</title>
+<meta name="description" content="Demo de propuesta preparada por OrtiTech para Elite Garaje. No es la web oficial del concesionario.">
+<meta name="theme-color" content="#0d0e10">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=4">
+</head>
+<body data-page="contacto">
+<div id="top"></div>
+
+<main>
+  <header class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Migas"><a href="index.html">Inicio</a><span>/</span><span>Contacto</span></nav>
+      <h1>Hablemos</h1>
+      <p class="lead">¿Te interesa algún coche o alguno de nuestros servicios? Llámanos, escríbenos por WhatsApp o déjanos tus datos y te contactamos enseguida.</p>
+    </div>
+  </header>
+
+  <section style="padding-top:48px">
+    <div class="wrap split" style="align-items:start">
+      <div class="panel">
+        <form class="demo-form" style="display:grid;gap:16px">
+          <h2 style="font-size:24px">Déjanos tus datos</h2>
+          <div class="row2">
+            <div class="field"><label for="k-nombre">Nombre</label><input id="k-nombre" name="nombre" required autocomplete="name"></div>
+            <div class="field"><label for="k-tel">Teléfono</label><input id="k-tel" name="telefono" type="tel" required autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="k-email">Email</label><input id="k-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="k-coche">¿Te interesa algún coche?</label><select id="k-coche" name="coche" data-coches><option value="">Ninguno en concreto</option></select></div>
+          <div class="field"><label for="k-msg">Mensaje</label><textarea id="k-msg" name="mensaje" required></textarea></div>
+          <label class="check"><input type="checkbox"> Quiero recibir novedades del stock.</label>
+          <label class="check"><input type="checkbox" required> He leído y acepto la política de privacidad.</label>
+          <button class="btn red block" type="submit">Enviar mensaje</button>
+          <p class="note">Demo: este formulario no envía nada. En la web real, el mensaje os llega al email y al móvil.</p>
+        </form>
+        <div class="done"><div class="ok"><i data-i="check"></i></div><h3>¡Mensaje enviado!</h3><p class="muted">Te respondemos lo antes posible en horario de tienda.</p></div>
+      </div>
+      <div style="display:grid;gap:18px">
+        <div class="cta" style="grid-template-columns:1fr;padding:32px">
+          <div><h2 style="font-size:26px">¿Prefieres hablar ya?</h2><p class="lead" style="font-size:16px">De lunes a viernes, de 9:00 a 13:00 y de 16:00 a 19:00.</p></div>
+          <div class="ctas"><a class="btn red" href="tel:+34674144949"><i data-i="phone"></i>674 14 49 49</a><a class="btn wa" href="https://wa.me/34674144949?text=Hola%2C%20os%20escribo%20desde%20la%20web." target="_blank" rel="noopener"><i data-i="wa"></i>WhatsApp</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Visítanos</span><h2 class="title">Cómo llegar</h2><p class="lead">Atendemos con cita previa: avísanos antes de venir y te tenemos el coche preparado.</p></div></div>
+      <div class="visit" data-visita></div>
+    </div>
+  </section>
+</main>
+
+<div id="bottom"></div>
+<script src="js/coches.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>

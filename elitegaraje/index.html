@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Elite Garaje · Coches de ocasión en Sant Just Desvern (demo de OrtiTech)</title>
+<meta name="description" content="Demo de propuesta preparada por OrtiTech para Elite Garaje. No es la web oficial del concesionario.">
+<meta name="theme-color" content="#0d0e10">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=4">
+</head>
+<body data-page="inicio">
+<div id="top"></div>
+
+<main>
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <div class="rating"><span class="g">G</span><span class="stars">★★★★★</span><span><b>4,9</b> en Google · 16 reseñas</span></div>
+        <h1>Coches de ocasión <em>revisados</em>, con garantía y listos para llevar.</h1>
+        <p class="lead">Concesionario en Sant Just Desvern, a un paso de Barcelona. Te financiamos a tu medida, tasamos tu coche actual y nos ocupamos de todo el papeleo.</p>
+        <div class="ctas">
+          <a class="btn red" href="coches.html"><i data-i="search"></i><span>Ver los <span data-n>19</span> coches</span></a>
+          <a class="btn ghost-dark" href="tasacion.html">Vende tu coche</a>
+        </div>
+      </div>
+      <div class="mosaic" id="mosaic" aria-label="Algunos coches del stock"></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <form class="finder" id="finder" aria-label="Buscador de coches">
+      <div class="field"><label for="f-marca">Marca</label><select id="f-marca" name="marca"><option value="">Todas las marcas</option></select></div>
+      <div class="field"><label for="f-carroceria">Tipo</label><select id="f-carroceria" name="carroceria"><option value="">Cualquier tipo</option></select></div>
+      <div class="field"><label for="f-precio">Precio máximo</label><select id="f-precio" name="precio">
+        <option value="">Sin límite</option><option value="15000">15.000 €</option><option value="20000">20.000 €</option>
+        <option value="25000">25.000 €</option><option value="30000">30.000 €</option><option value="40000">40.000 €</option></select></div>
+      <button class="btn red" type="submit"><i data-i="search"></i>Buscar</button>
+    </form>
+  </div>
+
+  <div class="perks">
+    <div class="wrap">
+      <div class="perk"><div class="ic"><i data-i="shield"></i></div><div><b>Garantía incluida</b><small>Todos los coches salen con garantía, de 12 meses en la mayoría.</small></div></div>
+      <div class="perk"><div class="ic"><i data-i="doc"></i></div><div><b>Cambio de nombre incluido</b><small>Nos encargamos de la transferencia y de los trámites.</small></div></div>
+      <div class="perk"><div class="ic"><i data-i="euro"></i></div><div><b>Financiación sin entrada</b><small>Cuotas a tu medida y una respuesta rápida.</small></div></div>
+      <div class="perk"><div class="ic"><i data-i="truck"></i></div><div><b>Entrega a domicilio</b><small>Te lo llevamos a cualquier punto de España (consulta condiciones).</small></div></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Stock</span><h2 class="title">Recién llegados</h2></div>
+        <a class="btn ghost" href="coches.html">Ver todo el stock →</a>
+      </div>
+      <div class="grid" id="destacados"></div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Explora</span><h2 class="title">¿Qué tipo de coche buscas?</h2></div></div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Servicios</span><h2 class="title">Todo lo que necesitas, en un solo sitio</h2>
+        <p class="lead">Compra, venta y financiación con el mismo equipo y sin intermediarios.</p></div></div>
+      <div class="services">
+        <a class="service rv" href="servicios.html#carta"><div class="ic"><i data-i="search"></i></div><h3>Coches a la carta</h3><p>¿No está en el stock? Dinos qué buscas y te lo encontramos, también de importación.</p><span class="more">Saber más →</span></a>
+        <a class="service rv" href="financiacion.html"><div class="ic"><i data-i="euro"></i></div><h3>Financiación</h3><p>Con o sin entrada y con el plazo que mejor te encaje. Calcula tu cuota en un minuto.</p><span class="more">Calcular cuota →</span></a>
+        <a class="service rv" href="tasacion.html"><div class="ic"><i data-i="tag"></i></div><h3>Compramos tu coche</h3><p>Tasación gratis y sin compromiso. Si aceptas, pago inmediato y nos encargamos de los trámites.</p><span class="more">Tasar mi coche →</span></a>
+        <a class="service rv" href="servicios.html#garantia"><div class="ic"><i data-i="shield"></i></div><h3>Garantía</h3><p>Cada coche se entrega revisado y con garantía, para que lo disfrutes sin preocupaciones.</p><span class="more">Ver qué cubre →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap split">
+      <div class="img rv"><img src="img/coches/b1e48fb1-3-s.webp" alt="Porsche 911 Carrera 4S Cabrio del stock de Elite Garaje" loading="lazy" width="720" height="540"></div>
+      <div class="rv">
+        <span class="eyebrow">Quiénes somos</span>
+        <h2 class="title">Comprar un coche, sin historias raras</h2>
+        <p class="lead">Somos un equipo pequeño con experiencia real en el sector. Elegimos cada coche uno a uno, lo revisamos a fondo y te contamos todo lo que hay que saber antes de que decidas.</p>
+        <ul class="ticks">
+          <li><span><b>Coches nacionales y con historial.</b> Muchos de un solo propietario y con el mantenimiento hecho en la marca.</span></li>
+          <li><span><b>Precios claros.</b> El precio que ves incluye el IVA y el cambio de nombre.</span></li>
+          <li><span><b>Trato cercano.</b> Te asesoramos sin compromiso y te acompañamos hasta la entrega.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Opiniones</span><h2 class="title">Lo que dicen nuestros clientes</h2></div>
+        <div class="rating" style="margin:0"><span class="g">G</span><span class="stars">★★★★★</span><span><b>4,9</b> · 16 reseñas en Google</span></div></div>
+      <div class="reviews">
+        <div class="review rv"><div class="stars">★★★★★</div><p>«Ni un mareo, ni una mentira. Me llevé el coche que quería en tiempo récord.»</p><div class="who"><span class="av">N</span><b>Nico Sanz</b></div></div>
+        <div class="review rv"><div class="stars">★★★★★</div><p>«Entré por curiosear y salí con las llaves. Trato impecable y el coche está nuevo, nuevo. De 10.»</p><div class="who"><span class="av">S</span><b>Sira Mora</b></div></div>
+        <div class="review rv"><div class="stars">★★★★★</div><p>«Me pateé media ciudad y aquí es donde menos me han intentado liar. Gente seria y coches brutales.»</p><div class="who"><span class="av">M</span><b>Manu Peña</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head" style="justify-content:center;text-align:center"><div><span class="eyebrow">Dudas</span><h2 class="title">Preguntas frecuentes</h2></div></div>
+      <div class="faq">
+        <details><summary>¿Qué tipo de coches vendéis?</summary><p>Coches de ocasión, seminuevos y de importación de las principales marcas, todos revisados y listos para entregar.</p></details>
+        <details><summary>¿Puedo reservar un coche antes de verlo?</summary><p>Sí. Desde la ficha de cada coche puedes reservarlo con una señal y te lo guardamos hasta que vengas a verlo.</p></details>
+        <details><summary>¿Se puede financiar cualquier coche?</summary><p>Sí, tenemos financiación para todo el stock y para perfiles muy distintos, con o sin entrada. <a href="financiacion.html">Calcula tu cuota</a>.</p></details>
+        <details><summary>¿Aceptáis mi coche como parte del pago?</summary><p>Sí. Te lo tasamos gratis y sin compromiso y descontamos su valor del coche que te lleves.</p></details>
+        <details><summary>¿Enviáis coches a otras provincias?</summary><p>Sí, entregamos en cualquier punto de España con transporte asegurado. Consulta las condiciones para tu zona.</p></details>
+        <details><summary>¿Tengo que pedir cita para ir?</summary><p>Te recomendamos llamarnos o escribirnos por WhatsApp antes de venir: así te tenemos el coche preparado y te atendemos sin esperas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta rv">
+        <div><h2 class="title">¿No encuentras el coche que buscas?</h2><p class="lead">Cuéntanos marca, presupuesto y qué necesitas. Lo buscamos por ti, sin compromiso.</p></div>
+        <div class="ctas">
+          <a class="btn wa" href="https://wa.me/34674144949?text=Hola%2C%20busco%20un%20coche%20a%20la%20carta." target="_blank" rel="noopener"><i data-i="wa"></i>Escríbenos</a>
+          <a class="btn light" href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0" id="visita">
+    <div class="wrap">
+      <div class="head"><div><span class="eyebrow">Visítanos</span><h2 class="title">Estamos en Sant Just Desvern</h2>
+        <p class="lead">En el Polígono Industrial Sud-Oest. Llámanos o escríbenos antes de venir y te tenemos el coche preparado.</p></div></div>
+      <div class="visit" data-visita></div>
+    </div>
+  </section>
+</main>
+
+<div id="bottom"></div>
+<script src="js/coches.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>
