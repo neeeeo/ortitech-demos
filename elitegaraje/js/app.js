@@ -5,11 +5,10 @@
     telHref: "tel:+34674144949",
     wa: "34674144949",
     email: "info@elitegarajebcn.com", // provisional: el actual (dani@) no tiene acceso; se confirma con el cliente
-    calle: "Ctra. Reial, 122 A",
-    zona: "Polígono Industrial Sud-Oest",
-    cp: "08960 Sant Just Desvern, Barcelona",
+    calle: "C/ Isidor Cartró Robert, 10",
+    cp: "08870 Sitges, Barcelona",
     horario: ["Lunes a viernes", "9:00 – 13:00 y 16:00 – 19:00"],
-    lat: 41.3801549, lng: 2.0623622,
+    lat: 41.240613, lng: 1.8001575,
     google: { nota: "4,9", resenas: 16 },
   };
   const COCHES = window.COCHES || [];
@@ -143,7 +142,7 @@
               <li><a href="servicios.html#garantia">Garantía</a></li>
             </ul></div>
             <div><h4>Visítanos</h4><ul>
-              <li>${NEGOCIO.calle}<br>${NEGOCIO.zona}<br>${NEGOCIO.cp}</li>
+              <li>${NEGOCIO.calle}<br>${NEGOCIO.cp}</li>
               <li>${NEGOCIO.horario.join("<br>")}</li>
               <li><a href="${NEGOCIO.telHref}">${NEGOCIO.tel}</a></li>
               <li><a href="mailto:${NEGOCIO.email}">${NEGOCIO.email}</a> <span class="pill-soon">a confirmar</span></li>
@@ -172,14 +171,14 @@
     $$("[data-visita]").forEach(el => {
       el.innerHTML = `
         <div class="info-card">
-          <div class="info-row"><div class="ic">${I.pin}</div><div><small>Dirección</small><a href="https://www.google.com/maps/search/?api=1&query=${NEGOCIO.lat},${NEGOCIO.lng}" target="_blank" rel="noopener">${NEGOCIO.calle}</a><div class="muted">${NEGOCIO.zona} · ${NEGOCIO.cp}</div></div></div>
+          <div class="info-row"><div class="ic">${I.pin}</div><div><small>Dirección</small><a href="https://www.google.com/maps/search/?api=1&query=${NEGOCIO.lat},${NEGOCIO.lng}" target="_blank" rel="noopener">${NEGOCIO.calle}</a><div class="muted">${NEGOCIO.cp}</div></div></div>
           <div class="info-row"><div class="ic">${I.clock}</div><div><small>Horario</small><b>${NEGOCIO.horario[0]}</b><div class="muted">${NEGOCIO.horario[1]} · con cita previa</div></div></div>
           <div class="info-row"><div class="ic">${I.phone}</div><div><small>Teléfono</small><a href="${NEGOCIO.telHref}">${NEGOCIO.tel}</a><div class="muted">Pregunta por Dani</div></div></div>
           <div class="info-row"><div class="ic">${I.wa}</div><div><small>WhatsApp</small><a href="${waLink("Hola, quiero pedir cita para ver un coche.")}" target="_blank" rel="noopener">Escríbenos</a><div class="muted">Te respondemos en horario de tienda</div></div></div>
           <div class="info-row"><div class="ic">${I.mail}</div><div><small>Email <span class="pill-soon">a confirmar</span></small><a href="mailto:${NEGOCIO.email}">${NEGOCIO.email}</a></div></div>
           <a class="btn red" href="https://www.google.com/maps/dir/?api=1&destination=${NEGOCIO.lat},${NEGOCIO.lng}" target="_blank" rel="noopener">${I.pin}Cómo llegar</a>
         </div>
-        <div class="map"><iframe title="Mapa: Elite Garaje en Sant Just Desvern" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        <div class="map"><iframe title="Mapa: Elite Garaje en Sitges" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           src="https://maps.google.com/maps?q=${NEGOCIO.lat},${NEGOCIO.lng}&z=16&hl=es&output=embed"></iframe></div>`;
     });
   }
